@@ -21,14 +21,15 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   appBar: {
-    background: "linear-gradient(to bottom, #0097a7, #b2ebf2)",
+    background:
+      "linear-gradient(to left, transparent 10%, rgba(10, 200, 150, 0.8) 100%)",
     position: "fixed",
+    zIndex: theme.zIndex.drawer + 1,
   },
   menuButton: {
     marginRight: theme.spacing(2),
-    display: "none",
-    [theme.breakpoints.down("sm")]: {
-      display: "block",
+    [theme.breakpoints.up("sm")]: {
+      display: "none",
     },
   },
   titleContainer: {
@@ -44,8 +45,23 @@ const useStyles = makeStyles((theme) => ({
     width: 250,
   },
   section: {
-    height: "100vh",
     paddingTop: theme.spacing(10),
+  },
+  drawerItem: {
+    textAlign: "center",
+  },
+  drawerText: {
+    fontSize: "1.2rem",
+    [theme.breakpoints.down("sm")]: {
+      fontSize: "1rem",
+    },
+  },
+  drawerPaper: {
+    background:
+      "linear-gradient(to left, transparent 0%, rgba(10, 200, 150, 0.6) 100%)",
+    color: "white",
+    fontSize:"20px",
+    fontWeight:"bold"
   },
 }));
 
@@ -114,7 +130,16 @@ export default function NavBar() {
           </div>
         </Toolbar>
       </AppBar>
-      <Drawer anchor="left" open={drawerOpen} onClose={toggleDrawer(false)}>
+      <Drawer
+        anchor="left"
+        open={drawerOpen}
+        onClose={toggleDrawer(false)}
+        PaperProps={{
+          classes: {
+            root: classes.drawerPaper,
+          },
+        }}
+      >
         <List
           className={classes.drawerList}
           onClick={toggleDrawer(false)}
@@ -122,26 +147,30 @@ export default function NavBar() {
         >
           {menuItems.map((text) => (
             <ListItem button key={text} onClick={() => scrollToSection(text)}>
-              <ListItemText primary={text} />
+              <ListItemText
+                primary={text}
+                className={classes.drawerItem}
+                classes={{ primary: classes.drawerText }}
+              />
             </ListItem>
           ))}
         </List>
       </Drawer>
 
       <div ref={homeRef} className={classes.section}>
-        <Home/>
+        <Home />
       </div>
       <div ref={aboutRef} className={classes.section}>
-        < About/>
+        <About />
       </div>
       <div ref={skillRef} className={classes.section}>
-        <Skill/>
+        <Skill />
       </div>
       <div ref={projectsRef} className={classes.section}>
-        <Projects/>
+        <Projects />
       </div>
       <div ref={contactRef} className={classes.section}>
-        <Contact/>
+        <Contact />
       </div>
     </div>
   );

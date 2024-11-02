@@ -108,7 +108,7 @@ const Contact = () => {
           variant="outlined"
           fullWidth
           multiline
-          rows={4}
+          minRows={4}
           className={classes.input}
           required
           value={formData.message}
@@ -117,6 +117,7 @@ const Contact = () => {
         <Button type="submit" variant="contained" className={classes.button}>
           Send Message
         </Button>
+        
       </form>
     </Container>
   );

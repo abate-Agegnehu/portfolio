@@ -6,16 +6,13 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
     background:
       "linear-gradient(to right, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
-    height: "100vh",
     position: "relative",
     zIndex: 1,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      height: "auto", 
+      height: "auto",
     },
   },
   left: {
@@ -24,8 +21,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", 
-      margin: "10% 0", 
+      maxWidth: "80%",
+      margin: "10% 0",
     },
   },
   right: {
@@ -34,8 +31,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", 
-      margin: "10% 0", 
+      maxWidth: "80%",
+      margin: "10% 0",
     },
   },
   image: {
@@ -45,29 +42,26 @@ const useStyles = makeStyles((theme) => ({
   },
   h2: {
     color: "#01A0AA",
-    fontSize: "2.5rem", 
+    fontSize: "2.5rem",
     fontWeight: "900",
     margin: "2px 0",
-    textAlign: "center", 
   },
   h1: {
     color: "#007F87",
-    fontSize: "3rem", 
+    fontSize: "3rem",
     fontWeight: "900",
     margin: "2px 0",
   },
   h4: {
     color: "#000000",
-    fontSize: "1.5rem", 
+    fontSize: "1.5rem",
     margin: "2px 0",
     fontWeight: "bold",
-    textAlign: "center", 
   },
   p: {
-    fontSize: "1.25rem", 
+    fontSize: "1.25rem",
     fontWeight: "300",
     lineHeight: "1.6",
-    textAlign: "center", 
   },
 }));
 

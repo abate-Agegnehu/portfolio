@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      height: "auto", // Allow height to adjust on smaller screens
+      height: "auto", 
     },
   },
   left: {
@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", // Increase width on small screens
-      margin: "10% 0", // Adjust margins for better spacing
+      maxWidth: "80%", 
+      margin: "10% 0",
     },
   },
   right: {
@@ -34,33 +34,33 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", // Increase width on small screens
-      margin: "10% 0", // Adjust margins for better spacing
+      maxWidth: "80%", 
+      margin: "10% 0", 
     },
   },
   image: {
     width: "100%",
-    height: "auto", // Fix typo from "autho" to "auto"
-    borderRadius: "10px", // Optional: Add border radius for a softer look
+    height: "auto", 
+    borderRadius: "10px", 
   },
   h1: {
     color: "#007F87",
-    fontSize: "3rem", // Use rem for better scaling
+    fontSize: "3rem", 
     fontWeight: "bold",
-    margin: "10px 0", // Adjust margin for better spacing
-    textAlign: "center", // Center align the heading
+    margin: "10px 0", 
+    textAlign: "center", 
   },
   p: {
-    fontSize: "1.25rem", // Use rem for better scaling
+    fontSize: "1.25rem", 
     fontWeight: "300",
     lineHeight: "1.6",
-    textAlign: "justify", // Justify text for better readability
+    textAlign: "justify", 
   },
   hr: {
     height: "1px",
     background: "#000000",
     width: "60%",
-    margin: "10px auto", // Center align the line
+    margin: "10px auto", 
   },
 }));
 

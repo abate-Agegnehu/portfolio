@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      height: "auto", // Allow height to adjust on smaller screens
+      height: "auto", 
     },
   },
   left: {
@@ -24,8 +24,8 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", // Increase width on small screens
-      margin: "10% 0", // Adjust margins for better spacing
+      maxWidth: "80%", 
+      margin: "10% 0", 
     },
   },
   right: {
@@ -34,41 +34,40 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", // Increase width on small screens
-      margin: "10% 0", // Adjust margins for better spacing
+      maxWidth: "80%", 
+      margin: "10% 0", 
     },
   },
   image: {
     width: "100%",
     height: "auto",
-    borderRadius: "10px", // Optional: Add border radius to the image for a softer look
+    borderRadius: "10px",
   },
   h2: {
     color: "#01A0AA",
-    fontSize: "2.5rem", // Use rem for better scaling
+    fontSize: "2.5rem", 
     fontWeight: "900",
     margin: "2px 0",
-    textAlign: "center", // Center align on small screens
+    textAlign: "center", 
   },
   h1: {
     color: "#007F87",
-    fontSize: "3rem", // Use rem for better scaling
+    fontSize: "3rem", 
     fontWeight: "900",
     margin: "2px 0",
-    textAlign: "center", // Center align on small screens
   },
   h4: {
     color: "#000000",
-    fontSize: "1.5rem", // Use rem for better scaling
+    fontSize: "1.5rem", 
     margin: "2px 0",
     fontWeight: "bold",
-    textAlign: "center", // Center align on small screens
+    textAlign: "center", 
   },
   p: {
-    fontSize: "1.25rem", // Use rem for better scaling
+    fontSize: "1.25rem", 
     fontWeight: "300",
     lineHeight: "1.6",
-    textAlign: "center", // Center align on small screens
+    textAlign: "center", 
   },
 }));
 

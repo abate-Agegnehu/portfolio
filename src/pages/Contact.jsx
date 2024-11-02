@@ -66,7 +66,7 @@ const Contact = () => {
         (result) => {
           console.log("Email sent successfully:", result.text);
           alert("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" }); // Reset form
+          setFormData({ name: "", email: "", message: "" }); 
         },
         (error) => {
           console.error("Error sending email:", error.text);

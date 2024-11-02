@@ -60,12 +60,12 @@ const useStyles = makeStyles((theme) => ({
     background:
       "linear-gradient(to left, transparent 0%, rgba(10, 200, 150, 0.6) 100%)",
     color: "white",
-    fontSize:"20px",
-    fontWeight:"bold"
+    fontSize: "20px",
+    fontWeight: "bold",
   },
 }));
 
-export default function NavBar() {
+const NavBar = () => {
   const classes = useStyles();
   const theme = useTheme();
   const isSmallScreen = useMediaQuery(theme.breakpoints.down("sm"));
@@ -174,4 +174,6 @@ export default function NavBar() {
       </div>
     </div>
   );
-}
+};
+
+export default NavBar;

@@ -1,7 +1,14 @@
 import React, { useState } from "react";
 import emailjs from "emailjs-com";
 import { makeStyles } from "@material-ui/core/styles";
-import { TextField, Button, Typography, Container } from "@material-ui/core";
+import {
+  TextField,
+  Button,
+  Typography,
+  Container,
+  Snackbar,
+  SnackbarContent,
+} from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -34,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: "#005f66",
     },
   },
+  snackbar: {
+    backgroundColor: "#01A0AA", 
+  },
 }));
 
 const Contact = () => {
@@ -44,12 +54,15 @@ const Contact = () => {
     message: "",
   });
 
+  const [snackbarOpen, setSnackbarOpen] = useState(false);
+  const [snackbarMessage, setSnackbarMessage] = useState("");
+
   const handleChange = (e) => {
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
+    setFormData((prevData) => ({
+      ...prevData,
       [name]: value,
-    });
+    }));
   };
 
   const handleSubmit = (e) => {
@@ -57,22 +70,28 @@ const Contact = () => {
 
     emailjs
       .send(
-        "service_t5mrshk", 
-        "template_z4ugh4s", 
+        "service_t5mrshk",
+        "template_z4ugh4s",
         formData,
-        "7f3RtTbPz1kzMs0_X" 
+        "7f3RtTbPz1kzMs0_X"
       )
       .then(
         (result) => {
           console.log("Email sent successfully:", result.text);
-          alert("Message sent successfully!");
-          setFormData({ name: "", email: "", message: "" }); 
+          setSnackbarMessage("Message sent successfully!");
+          setSnackbarOpen(true);
+          setFormData({ name: "", email: "", message: "" });
         },
         (error) => {
           console.error("Error sending email:", error.text);
-          alert("Failed to send message. Please try again.");
+          setSnackbarMessage("Failed to send message. Please try again.");
+          setSnackbarOpen(true);
         }
       );
+  };
+
+  const handleCloseSnackbar = () => {
+    setSnackbarOpen(false);
   };
 
   return (
@@ -117,8 +136,18 @@ const Contact = () => {
         <Button type="submit" variant="contained" className={classes.button}>
           Send Message
         </Button>
-        
       </form>
+
+      <Snackbar
+        open={snackbarOpen}
+        onClose={handleCloseSnackbar}
+        autoHideDuration={4000} 
+      >
+        <SnackbarContent
+          className={classes.snackbar}
+          message={snackbarMessage}
+        />
+      </Snackbar>
     </Container>
   );
 };

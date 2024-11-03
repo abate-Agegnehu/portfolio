@@ -15,7 +15,7 @@ const useStyles = makeStyles((theme) => ({
     zIndex: 1,
     [theme.breakpoints.down("sm")]: {
       flexDirection: "column",
-      height: "auto", 
+      height: "auto",
     },
   },
   left: {
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", 
+      maxWidth: "80%",
       margin: "10% 0",
     },
   },
@@ -34,33 +34,33 @@ const useStyles = makeStyles((theme) => ({
     maxWidth: "50%",
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
-      maxWidth: "80%", 
-      margin: "10% 0", 
+      maxWidth: "80%",
+      margin: "10% 0",
     },
   },
   image: {
     width: "100%",
-    height: "auto", 
-    borderRadius: "10px", 
+    height: "auto",
+    borderRadius: "10px",
   },
   h1: {
     color: "#007F87",
-    fontSize: "3rem", 
+    fontSize: "3rem",
     fontWeight: "bold",
-    margin: "10px 0", 
-    textAlign: "center", 
+    margin: "10px 0",
+    textAlign: "center",
   },
   p: {
-    fontSize: "1.25rem", 
+    fontSize: "1.25rem",
     fontWeight: "300",
     lineHeight: "1.6",
-    textAlign: "justify", 
+    textAlign: "justify",
   },
   hr: {
     height: "1px",
     background: "#000000",
     width: "60%",
-    margin: "10px auto", 
+    margin: "10px auto",
   },
 }));
 

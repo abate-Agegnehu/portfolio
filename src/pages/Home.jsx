@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
-import oa from "../images/oa.jpg";
+import abate2 from "../images/abate2.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -70,7 +70,7 @@ const Home = () => {
   return (
     <div className={classes.root}>
       <div className={classes.left}>
-        <img src={oa} alt="Left Image" className={classes.image} />
+        <img src={abate2} alt="Abate Agegnehu" className={classes.image} />
       </div>
       <div className={classes.right}>
         <h2 className={classes.h2}>Hello It's Me</h2>

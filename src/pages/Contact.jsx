@@ -19,10 +19,16 @@ const useStyles = makeStyles((theme) => ({
     background:
       "linear-gradient(to top, transparent 60%, rgba(10, 200, 150, 0.6) 100%)",
   },
+
   title: {
-    marginBottom: theme.spacing(2),
     fontWeight: "bold",
     color: "#007F87",
+  },
+  hr: {
+    height: "1px",
+    background: "#000000",
+    width: "15%",
+    marginBottom: theme.spacing(3),
   },
   form: {
     display: "flex",
@@ -42,7 +48,7 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   snackbar: {
-    backgroundColor: "#01A0AA", 
+    backgroundColor: "#01A0AA",
   },
 }));
 
@@ -99,6 +105,7 @@ const Contact = () => {
       <Typography variant="h4" className={classes.title}>
         Contact Us
       </Typography>
+      <hr  className={classes.hr}/>
       <form onSubmit={handleSubmit} className={classes.form}>
         <TextField
           label="Name"

@@ -4,7 +4,8 @@ import { Container, Typography, Link } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   footer: {
-    backgroundColor: "#f8f9fa",
+    background:
+      "linear-gradient(to right, transparent 0%, rgba(10, 200, 150, 0.6) 100%)",
     padding: theme.spacing(2),
     textAlign: "center",
   },

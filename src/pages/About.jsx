@@ -1,6 +1,6 @@
 import { makeStyles } from "@material-ui/core";
 import React from "react";
-import ac from "../images/ac.jpg";
+import abate1 from "../images/abate1.png";
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -85,7 +85,7 @@ const About = () => {
         </p>
       </div>
       <div className={classes.right}>
-        <img src={ac} alt="About Me" className={classes.image} />
+        <img src={abate1} alt="Abate Agegnehu" className={classes.image} />
       </div>
     </div>
   );

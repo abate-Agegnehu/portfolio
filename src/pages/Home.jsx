@@ -29,6 +29,9 @@ const useStyles = makeStyles((theme) => ({
     flex: 1,
     margin: "5% 3%",
     maxWidth: "50%",
+    display: "flex", 
+    flexDirection: "column", 
+    justifyContent: "center", 
     padding: theme.spacing(2),
     [theme.breakpoints.down("sm")]: {
       maxWidth: "80%",
@@ -45,23 +48,27 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "2.5rem",
     fontWeight: "900",
     margin: "2px 0",
+    textAlign: "left", 
   },
   h1: {
     color: "#007F87",
     fontSize: "3rem",
     fontWeight: "900",
     margin: "2px 0",
+    textAlign: "left", 
   },
   h4: {
     color: "#000000",
     fontSize: "1.5rem",
     margin: "2px 0",
     fontWeight: "bold",
+    textAlign: "left", 
   },
   p: {
     fontSize: "1.25rem",
     fontWeight: "300",
     lineHeight: "1.6",
+    textAlign: "left",
   },
 }));
 
